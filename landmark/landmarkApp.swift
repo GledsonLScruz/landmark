@@ -7,9 +7,11 @@ import SwiftUI
 
 @main
 struct kardlyApp: App {
+    @State private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(modelData)
         }
     }
 }

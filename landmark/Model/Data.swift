@@ -1,14 +1,17 @@
 //
 //  Data.swift
-//  kardly
 //
 //  Created by Gledson Cruz on 07/07/25.
 //
 
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+@Observable
+class ModelData {
+    var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json")
 
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
